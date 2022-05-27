@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  api:
+    build:
+      context: ../
+      dockerfile: ./docker/dockerfile
+      target: development
+    volumes:
+      - ../src:/usr/api/src
+      - ../.env:/usr/api/.env
+    container_name: poke-api
+    ports:
+      - '5000:5000'
+    command: yarn start:dev
+
+networks:
+  apps_network:
+    driver: bridge
