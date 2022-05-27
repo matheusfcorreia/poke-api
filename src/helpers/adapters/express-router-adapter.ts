@@ -1,4 +1,4 @@
-import { HttpRequest } from '@/interfaces'
+import { HttpRequest } from '@/contracts/http'
 import { Request, Response } from 'express'
 
 export class ExpressRouterAdapter {
