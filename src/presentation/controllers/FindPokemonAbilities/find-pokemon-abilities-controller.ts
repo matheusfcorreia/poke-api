@@ -24,7 +24,7 @@ export class FindPokemonAbilitiesController
 
       return new HttpResponse(abilities, 'success', 200)
     } catch (error) {
-      return new HttpResponse(error.message, 'failed', 404)
+      return new HttpResponse(error, 'failed', 400)
     }
   }
 }
